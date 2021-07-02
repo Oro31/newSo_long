@@ -6,7 +6,7 @@
 /*   By: rvalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 07:46:41 by rvalton           #+#    #+#             */
-/*   Updated: 2021/04/06 08:42:09 by rvalton          ###   ########.fr       */
+/*   Updated: 2021/07/02 06:12:28 by rvalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_init_before_parse(t_vars *vars)
 	vars->mlx = mlx_init();
 	if (!(vars->mlx))
 		return (0);
-	vars->monde.map = malloc(sizeof(char*));
+	vars->monde.map = malloc(sizeof(char *));
 	if (!(vars->monde.map))
 		return (0);
 	vars->monde.map[0] = NULL;

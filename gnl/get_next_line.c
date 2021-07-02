@@ -6,7 +6,7 @@
 /*   By: rvalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 02:03:14 by rvalton           #+#    #+#             */
-/*   Updated: 2021/03/31 07:55:01 by rvalton          ###   ########.fr       */
+/*   Updated: 2021/07/02 06:06:46 by rvalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	get_next_line(int fd, char **line)
 	if (fd < 0)
 		return (-1);
 	line[0] = get_init();
-	if(!line[0])
+	if (!line[0])
 		return (-1);
 	while (!(is_endl(buf)))
 	{

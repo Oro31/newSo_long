@@ -3,7 +3,7 @@
 char	*ft_realloc_itoa(char *str, char c)
 {
 	char	*tmp;
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i])
@@ -24,7 +24,7 @@ char	*ft_realloc_itoa(char *str, char c)
 char	*ft_itoa(int nb)
 {
 	char	*res;
-	int	m;
+	int		m;
 
 	res = malloc(sizeof(char));
 	res[0] = '\0';

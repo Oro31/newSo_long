@@ -34,28 +34,28 @@ int	ft_get_started(t_vars *vars)
 int	main(int argc, char *argv[])
 {
 	t_vars	vars;
-	int	fd;
+	int		fd;
 	char	*line;
-	int	res;
+	int		res;
 
 	line = NULL;
 	res = ft_init_before_parse(&vars);
 	if (!(res))
 		return (ft_exit(&vars, 1));
 	fd = open(argv[1], O_RDONLY);
-	if(fd == -1)
+	if (fd == -1)
 		return (ft_exit(&vars, 2));
 	while (get_next_line(fd, &line) > 0)
 		ft_parse_line(line, &vars);
 	free(line);
 	close(fd);
 	res = ft_get_started(&vars);
-	if(res != 1)
+	if (res != 1)
 		return (ft_exit(&vars, res));
 	ft_draw(&vars);
-	mlx_hook(vars.win, 3, 1L<<1, ft_key_hook, &vars);
-	mlx_hook(vars.win, 33, 1L<<17, ft_redcross, &vars);
-	mlx_hook(vars.win, 9, 1L<<21, ft_resize_hook, &vars);
+	mlx_hook(vars.win, 3, 1L << 1, ft_key_hook, &vars);
+	mlx_hook(vars.win, 33, 1L << 17, ft_redcross, &vars);
+	mlx_hook(vars.win, 9, 1L << 21, ft_resize_hook, &vars);
 	mlx_loop(vars.mlx);
 	return (0);
 }

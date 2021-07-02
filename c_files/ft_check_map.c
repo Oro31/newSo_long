@@ -51,7 +51,7 @@ static	int	ft_ismap_rect(char **map)
 		j = ft_len_mpline(map[i]);
 		if (j != maxlen)
 			return (0);
-	i++;
+		i++;
 	}
 	return (1);
 }

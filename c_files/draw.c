@@ -5,7 +5,7 @@ void	ft_put_pixel_on_img(t_data *img, int color, int x, int y)
 	char	*dst;
 
 	dst = img->addr + (y * img->ll + x * (img->bpp / 8));
-	*(unsigned int*)dst = color;
+	*(unsigned int *)dst = color;
 }
 
 void	ft_get_background(t_vars *vars)
@@ -47,7 +47,7 @@ void	ft_get_visual(t_vars *vars)
 			if (vars->monde.map[j / 24][i / 24] != '1' &&
 					vars->monde.map[j / 24][i / 24] != '0')
 			{
-				color = ft_myxpm_pixelput(vars, i , j);
+				color = ft_myxpm_pixelput(vars, i, j);
 				ft_put_pixel_on_img(&vars->img, color, i, j);
 			}
 			i++;

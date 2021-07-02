@@ -6,24 +6,24 @@
 /*   By: rvalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 01:58:33 by rvalton           #+#    #+#             */
-/*   Updated: 2021/03/31 07:55:51 by rvalton          ###   ########.fr       */
+/*   Updated: 2021/07/02 06:07:46 by rvalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char		*get_init(void)
+char	*get_init(void)
 {
 	char	*tmp;
 
 	tmp = malloc(sizeof(char));
-	if(!tmp)
+	if (!tmp)
 		return (NULL);
 	tmp[0] = '\0';
 	return (tmp);
 }
 
-int			is_endl(char *buf)
+int	is_endl(char *buf)
 {
 	int	i;
 
@@ -56,7 +56,7 @@ static void	get_fill(char *buf, char *tmp, int i)
 	tmp[i] = '\0';
 }
 
-char		*get_realloc(char *buf, char **line)
+char	*get_realloc(char *buf, char **line)
 {
 	int		i;
 	int		n;

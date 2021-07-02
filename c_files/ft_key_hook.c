@@ -45,7 +45,7 @@ void	ft_moove(t_vars *vars, char c)
 		vars->ply.dir = 'W';
 	else if (c == 'd')
 		vars->ply.dir = 'E';
-	ft_deplacer(vars);	
+	ft_deplacer(vars);
 	if (vars->monde.map[vars->ply.posy][vars->ply.posx] == 'C')
 		vars->monde.ncol--;
 	if (vars->monde.ncol == 0)
@@ -59,11 +59,11 @@ int	ft_key_hook(int keycode, t_vars *vars)
 {
 	if (keycode == 65307)
 		return (ft_exit(vars, 100));
-	else if (keycode == 119) /*may be 122 with azerty*/
+	else if (keycode == 119)
 		ft_moove(vars, 'w');
 	else if (keycode == 115)
 		ft_moove(vars, 's');
-	else if (keycode == 97) /*may be 113 with azerty*/
+	else if (keycode == 97)
 		ft_moove(vars, 'a');
 	else if (keycode == 100)
 		ft_moove(vars, 'd');

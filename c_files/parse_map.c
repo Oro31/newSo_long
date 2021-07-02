@@ -6,20 +6,20 @@
 /*   By: rvalton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 09:26:42 by rvalton           #+#    #+#             */
-/*   Updated: 2021/04/06 07:41:27 by rvalton          ###   ########.fr       */
+/*   Updated: 2021/07/02 06:26:59 by rvalton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int		ft_ismap_member(char c)
+int	ft_ismap_member(char c)
 {
 	if (c == '0' || c == '1' || c == 'C' || c == 'P' || c == 'E')
 		return (1);
 	return (0);
 }
 
-int		ft_len_mpline(char *line)
+int	ft_len_mpline(char *line)
 {
 	int		i;
 
@@ -90,7 +90,7 @@ char	**ft_parse_map(char *line, char **map)
 	fstdm = 0;
 	while (map[fstdm])
 		fstdm++;
-	tmp = malloc(sizeof(char*) * (fstdm + 2));
+	tmp = malloc(sizeof(char *) * (fstdm + 2));
 	if (tmp == NULL)
 		return (NULL);
 	tmp[fstdm + 1] = NULL;
