@@ -5,11 +5,9 @@ static void	ft_check_assets(t_vars *vars, t_map *monde, t_rsl *rsl)
 	int	i;
 	int	j;
 
-	j = 0;
-	while (monde->map[j])
+	while (monde->map[++j])
 	{
-		i = 0;
-		while (monde->map[j][i])
+		while (monde->map[j][++i])
 		{
 			if (monde->map[j][i] == 'C')
 				monde->ncol++;
@@ -23,9 +21,7 @@ static void	ft_check_assets(t_vars *vars, t_map *monde, t_rsl *rsl)
 				vars->ply.posx = i;
 				vars->ply.posy = j;
 			}
-			i++;
 		}
-		j++;
 	}
 	rsl->w = i;
 	rsl->h = j;
