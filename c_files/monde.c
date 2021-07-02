@@ -5,8 +5,10 @@ static void	ft_check_assets(t_vars *vars, t_map *monde, t_rsl *rsl)
 	int	i;
 	int	j;
 
+	j = -1;
 	while (monde->map[++j])
 	{
+		i = -1;
 		while (monde->map[j][++i])
 		{
 			if (monde->map[j][i] == 'C')

@@ -31,6 +31,13 @@ int	ft_get_started(t_vars *vars)
 	return (1);
 }
 
+static void	ft_gnl(int fd, char **line, t_vars *vars)
+{
+	while (get_next_line(fd, line) > 0)
+		ft_parse_line(*line, vars);
+	free(*line);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_vars	vars;
@@ -42,12 +49,11 @@ int	main(int argc, char *argv[])
 	res = ft_init_before_parse(&vars);
 	if (!(res))
 		return (ft_exit(&vars, 1));
-	fd = open(argv[1], O_RDONLY);
+	if (argc > 1)
+		fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		return (ft_exit(&vars, 2));
-	while (get_next_line(fd, &line) > 0)
-		ft_parse_line(line, &vars);
-	free(line);
+	ft_gnl(fd, &line, &vars);
 	close(fd);
 	res = ft_get_started(&vars);
 	if (res != 1)

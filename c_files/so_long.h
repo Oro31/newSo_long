@@ -2,8 +2,8 @@
 # define SO_LONG_H
 # include "../minilibx-linux/mlx.h"
 # include "../minilibx-linux/mlx_int.h"
-# include "../gnl/get_next_line.h"
 # include <unistd.h>
+# include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
 # include <math.h>
@@ -53,6 +53,13 @@ typedef struct s_vars {
 	int		xpm;
 	int		mlx_img;
 }		t_vars;
+
+/*#############################*/
+
+char	*get_init(void);
+int		is_endl(char *buf);
+char	*get_realloc(char *buf, char **line);
+int		get_next_line(int fd, char **line);
 
 /*#############################*/
 
